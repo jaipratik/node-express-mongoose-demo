@@ -12,7 +12,7 @@ role :db,  "174.129.18.232"
 
 
 
-set :deploy_via, :copy
+set :deploy_via, :remote_cache
 set :copy_exclude, [".git", ".DS_Store"]
 
 default_run_options[:pty] =  true
