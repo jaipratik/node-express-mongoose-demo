@@ -1,4 +1,5 @@
-
+node_modules
 .monitor
 Makefile
+todo.TODO
 npm-debug.log
