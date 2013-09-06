@@ -18,4 +18,20 @@ $(document).ready(function () {
     'width':'280px'
   });
 
+
+
+$('.classgo').on('click', function () {
+  var loc = $("#location").val();
+  var loc2  = "/tags/"+loc;
+
+  console.log('loc2 =', loc2);
+
+  console.log('loc=', loc);
+
+  
+$('.classgo').attr("href", loc2)
+
+});
+
+
 });

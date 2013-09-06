@@ -1,0 +1,46 @@
+extends ../layouts/default
+
+block main
+  //- h1= title
+
+  .row-fluid.span12
+  h1.maroon Welcome to IndiaDilse!
+  p.homepara  Serving Indian community Worldwide!
+
+block content
+
+  ul.inline
+    li
+      p.muted
+        a(href="/articles/") Articles
+    li
+      p.muted
+        a(href="/rooms/") Rooms
+    
+
+  ul.inline
+    li
+      p.muted
+        a(href="/tags/jalandhar") Rooms in Jalandhar
+
+
+
+  .row
+    .span7
+      form(name="input", action="/tags/", method="get")
+        key Location
+          input(type="text", name="city", id="location")
+
+        button.btn.btn-primary(type='submit') Submit
+        a(href="", class="classgo") Go
+
+
+       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      
+      a.btn(href='/articles', title="cancel") Cancel
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+!!! 5
+html
+  head
+    title geocomplete()
+    meta(charset='UTF-8')
+  body
+    form
+      input#geocomplete(type='text', placeholder='Type in an address', size='90')
+      input#find(type='button', value='find')
+    script(src='http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+    script(src='/js/jquery.geocomplete.js')
+    script
+      $(function(){
+      $("#geocomplete").geocomplete()
+      .bind("geocode:result", function(event, result){
+      })
+      .bind("geocode:error", function(event, status){
+      })
+      .bind("geocode:multiple", function(event, results){
+      });
+      $("#find").click(function(){
+      });
+      $("#examples a").click(function(){
+      $("#geocomplete").val($(this).text()).trigger("geocode");
+      return false;
+      });
+      });
