@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function ($) {
 
   // confirmations
   $('.confirm').submit(function (e) {
@@ -15,11 +15,14 @@ $(document).ready(function () {
 
   $('#tags').tagsInput({
     'height':'60px',
-    'width':'280px'
+    'width':'380px'
   });
 
 
 var goclick = function  () {
+  var a = $('#location').val().replace(/ /g,'');   
+        $('#location').val(a);  
+
   var loc = $("#location").val();
   var loc2  = "/tags/"+loc;
   $('.classgo').attr("href", loc2);
@@ -29,6 +32,10 @@ var goclick = function  () {
 
 
 $('.classgo').on('click', function () {
+
+var a = $('#location').val().replace(/ /g,'');   console.log('a =',a)
+              $('#location').val(a);    
+
   var loc = $("#location").val();
   var loc2  = "/tags/"+loc;
 $('.classgo').attr("href", loc2)
