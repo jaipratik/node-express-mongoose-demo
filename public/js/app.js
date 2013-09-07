@@ -19,19 +19,29 @@ $(document).ready(function () {
   });
 
 
+var goclick = function  () {
+  var loc = $("#location").val();
+  var loc2  = "/tags/"+loc;
+  $('.classgo').attr("href", loc2);
+  $('.classgo')[0].click();
+}
+
+
 
 $('.classgo').on('click', function () {
   var loc = $("#location").val();
   var loc2  = "/tags/"+loc;
-
-  console.log('loc2 =', loc2);
-
-  console.log('loc=', loc);
-
-  
 $('.classgo').attr("href", loc2)
-
 });
 
+
+$('#location').keypress(function  (e) {
+  if (!e) e = window.event;
+    var keyCode = e.keyCode || e.which;
+    if (keyCode == '13'){
+      goclick();
+      return false;
+    }
+})
 
 });
