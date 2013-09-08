@@ -10,7 +10,7 @@ var mongoose = require('mongoose')
  */
 
 exports.index = function (req, res) {
-  var criteria = { rtags: req.param('tag') }
+  var criteria = { tags: req.param('tag') }
   var perPage = 5
   var page = (req.param('page') > 0 ? req.param('page') : 1) - 1
   var options = {
@@ -23,7 +23,7 @@ exports.index = function (req, res) {
     if (err) return res.render('500')
     Room.count(criteria).exec(function (err, count) {
       res.render('rooms/index', {
-        title: 'Rooms tagged tag-room ' + req.param('rtag'),
+        title: 'Rooms tagged tag-room' + req.param('tag'),
         rooms: rooms,
         page: page + 1,
         pages: Math.ceil(count / perPage)
