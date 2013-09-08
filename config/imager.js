@@ -11,6 +11,17 @@ module.exports = {
         mini: {resize: "200x150", crop: "100x100"}
       }
     },
+    room: {
+      resize: {
+        detail: "800x600"
+      },
+      crop: {
+        thumb: "200x200"
+      },
+      resizeAndCrop: {
+        mini: {resize: "200x150", crop: "100x100"}
+      }
+    },
 
     gallery: {
       crop: {

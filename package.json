@@ -1,12 +1,12 @@
 {
   "name": "IndiaDilSe",
-  "description": "A demo app illustrating the usage of express, mongoose, passportjs, jade and other modules in nodejs",
+  "description": "Serving Indian community Worldwide!",
   "keywords": [
-    "express",
-    "mongoose",
-    "mongodb",
-    "passport",
-    "demo"
+    "indian-roommates",
+    "nanny-services",
+    "find-jobs",
+    "events",
+    "find"
   ],
   "version": "3.0.0",
   "private": false,

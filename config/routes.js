@@ -10,6 +10,7 @@ var async = require('async')
 
 var users = require('../app/controllers/users')
   , articles = require('../app/controllers/articles')
+  , rooms = require('../app/controllers/rooms')
   , home = require('../app/controllers/home')
   , auth = require('./middlewares/authorization')
 
@@ -18,6 +19,10 @@ var users = require('../app/controllers/users')
  */
 
 var articleAuth = [auth.requiresLogin, auth.article.hasAuthorization]
+
+var roomAuth = [auth.requiresLogin, auth.room.hasAuthorization]
+
+
 
 /**
  * Expose routes
@@ -97,6 +102,27 @@ module.exports = function (app, passport) {
   app.del('/articles/:id', articleAuth, articles.destroy)
 
   app.param('id', articles.load)
+
+
+   // rooms routes
+
+  app.get('/rooms-home', rooms.roomhome)
+
+  app.get('/rooms', rooms.index)
+  app.get('/rooms/new', auth.requiresLogin, rooms.new)
+  app.post('/rooms', auth.requiresLogin, rooms.create)
+  app.get('/rooms/:rm', rooms.show)
+  app.get('/rooms/:rm/edit', roomAuth, rooms.edit)
+  app.put('/rooms/:rm', roomAuth, rooms.update)
+  app.del('/rooms/:rm', roomAuth, rooms.destroy)
+
+  app.param('rm', rooms.load)
+ 
+ // tag routes
+  var rtags = require('../app/controllers/rtags')
+  app.get('/rtags/:rtag', rtags.index)
+
+
 
   // home route
   app.get('/', home.index)

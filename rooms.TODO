@@ -1,0 +1,17 @@
+
+ ☐ we already have default for Articles page.
+ ☐ 
+ ☐ we need the similar for Rooms page. 
+ ☐ 
+
+ ☐ When some one clicks for /rooms  it should land on rooms page with similar layout as default. 
+ ☐ 
+ ☐ then he shoudl be able select google places and land to rooms/ sf city/ .....
+ ☐ 
+ ☐ 
+ ☐ DONE -  everything is wokring fine,  Just fix the tags/rtags  keyword where ever its used in the rtags.js  & inside the Views. 
+ ☐ Once you correct it, you are done. 
+ ☐ 
+ ☐ When committing, add " Added MS keywords, "
+ ☐ 
+ ☐ 

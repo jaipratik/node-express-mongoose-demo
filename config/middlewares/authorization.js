@@ -38,3 +38,21 @@ exports.article = {
     next()
   }
 }
+
+
+/*
+ *  Room authorization routing middleware
+ */
+
+exports.room = {
+  hasAuthorization : function (req, res, next) {
+    if (req.room.user.id != req.user.id) {
+      req.flash('info', 'You are not authorized')
+      return res.redirect('/rooms/'+req.room.id)
+    }
+    next()
+  }
+}
+
+
+

@@ -3,3 +3,4 @@ node_modules
 Makefile
 todo.TODO
 npm-debug.log
+public/js/app-copy.js

@@ -1,0 +1,64 @@
+extends ../layouts/default
+
+block main
+  .row-fluid.span12
+    h1.maroon Welcome to IndiaDilse!
+    p.homepara  Serving Indian community Worldwide!
+    ul.inline
+      li
+        p.muted
+          a(href='/articles/') Articles
+      li
+        p.muted
+          a(href='/rooms/') Rooms
+      li
+        p.muted
+          a(href="/articles/") Apartments/ housing for rent    
+    ul.inline
+      li
+        p.muted
+          a(href='/') Nanny-Services
+      li
+        p.muted
+          a(href="/IndianRoommates/") Jobs
+      li
+        p.muted
+          a(href="/IndianRoommates/") Events 
+
+    .row
+      .span7
+        input#roomlocation(type='text', name='city')
+        key   
+        a.roomgo.button.btn.btn-primary(href='') Go
+        br
+      a.btn(href='/', title='cancel') Cancel
+
+    script(src='http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+    script(src='/js/jquery.geocomplete.js')
+    
+    script
+      $(document).ready(function ($) {
+        $("#roomlocation").geocomplete()
+        .bind("geocode:result", function(event, result){
+        })
+        .bind("geocode:error", function(event, status){
+        })
+        .bind("geocode:multiple", function(event, results){
+        });
+        $("#find").click(function(){
+        });
+        $('#find').on('click', function  () {
+        var a = $('#geocomplete').val().replace(/ /g,'');   console.log('a =',a)
+        $('#geocomplete').val(a);
+        $("#examples a").click(function(){
+        $("#geocomplete").val($(this).text()).trigger("geocode");
+        return false;
+        });
+        });});
+
+
+
+
+
+
