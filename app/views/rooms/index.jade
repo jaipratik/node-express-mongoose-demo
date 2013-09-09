@@ -2,6 +2,10 @@ extends ../layouts/default
 
 block main
   h1= title
+  a.btn.btn-primary.pull-right(href="/rooms/new", title="new article") Create New Room
+  br
+  br
+
 
 block content
   - if (rooms.length)

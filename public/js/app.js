@@ -1,19 +1,8 @@
 
 /*  Geo complete For New View  */
 
-<script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"> </script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"> </script>
-<script src="/js/jquery.geocomplete.js"> </script>
-
-<script>
-
-     
-
-</script>
-
-
    
-   
+
 
 
 $(document).ready(function ($) {
@@ -135,6 +124,32 @@ $('#tags').focusout(function  () {
 
 
    */
+
+
+
+
+     $("#tags").geocomplete()
+        .bind("geocode:result", function(event, result){
+        })
+        .bind("geocode:error", function(event, status){
+        })
+        .bind("geocode:multiple", function(event, results){
+        });
+        $("#find").click(function(){
+        });
+        $('#find').on('click', function  () {
+        var a = $('#geocomplete').val().replace(/ /g,'');   console.log('a =',a)
+        $('#geocomplete').val(a);
+        $("#examples a").click(function(){
+        $("#geocomplete").val($(this).text()).trigger("geocode");
+        return false;
+        });
+        });
+
+
+
+
+
 
 
 
