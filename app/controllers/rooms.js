@@ -82,7 +82,8 @@ exports.create = function (req, res) {
   room.uploadAndSave(req.files.image, function (err) {
     if (!err) {
       req.flash('success', 'Successfully created Room !!!')
-      return res.redirect('/rooms/'+room._id)
+      return res.redirect('/rooms_first/'+room._id)
+      // return res.redirect('/rooms/'+room._id)
     }
 
     res.render('rooms/new', {
@@ -92,6 +93,34 @@ exports.create = function (req, res) {
     })
   })
 }
+
+
+
+/**
+ * Show First
+ */
+
+
+exports.show_first = function(req, res){
+  res.render('rooms/show_first', {
+    title: req.room.title,
+    room: req.room
+  })
+}
+
+
+/**
+ * Show
+ */
+
+exports.show = function(req, res){
+  res.render('rooms/show', {
+    title: req.room.title,
+    room: req.room
+  })
+}
+
+
 
 /**
  * Edit an room
@@ -125,16 +154,6 @@ exports.update = function(req, res){
   })
 }
 
-/**
- * Show
- */
-
-exports.show = function(req, res){
-  res.render('rooms/show', {
-    title: req.room.title,
-    room: req.room
-  })
-}
 
 /**
  * Delete an article

@@ -112,6 +112,11 @@ module.exports = function (app, passport) {
   app.get('/rooms/new', auth.requiresLogin, rooms.new)
   app.post('/rooms', auth.requiresLogin, rooms.create)
   app.get('/rooms/:rm', rooms.show)
+  app.get('/rooms_first/:rm', rooms.show_first)
+  // app.get('/rooms-first/:id', rooms.show_first)
+
+
+
   app.get('/rooms/:rm/edit', roomAuth, rooms.edit)
   app.put('/rooms/:rm', roomAuth, rooms.update)
   app.del('/rooms/:rm', roomAuth, rooms.destroy)

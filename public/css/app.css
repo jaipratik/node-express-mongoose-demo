@@ -35,3 +35,21 @@ body {
 .homepara{
   margin-left: 300px;
 }
+
+.footerli{
+  margin-right: 50px;
+}
+
+
+a.footerlinks{
+  color:grey;
+}
+
+
+
+.push{
+  margin-bottom: 100px;
+}
+
+
+
