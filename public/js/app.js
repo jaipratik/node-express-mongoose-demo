@@ -1,3 +1,21 @@
+
+/*  Geo complete For New View  */
+
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"> </script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"> </script>
+<script src="/js/jquery.geocomplete.js"> </script>
+
+<script>
+
+     
+
+</script>
+
+
+   
+   
+
+
 $(document).ready(function ($) {
 
   // confirmations
@@ -13,10 +31,12 @@ $(document).ready(function ($) {
     });
   });
 
+/*
   $('#tags').tagsInput({
     'height':'60px',
     'width':'380px'
   });
+*/
 
 
 /*  Page specific changes */ 
@@ -63,7 +83,7 @@ var room_GoClicked = function  () {
   var a = $location.val().replace(/ /g,'');   
         $location.val(a);  
   var loc = $location.val();
-  var loc2  = "/rooms_in/"+loc;
+  var loc2  = "/rtags/"+loc;
   $('.roomgo').attr("href", loc2);
   $('.roomgo')[0].click();
 }
@@ -74,7 +94,7 @@ $('.roomgo').on('click', function () {
   var a = $location.val().replace(/ /g,'');  
               $location.val(a);    
   var loc = $location.val();
-  var loc2  = "/rooms_in/"+loc;
+  var loc2  = "/rtags/"+loc;
 $('.roomgo').attr("href", loc2)
 });
 
@@ -87,6 +107,34 @@ $('#roomlocation').keypress(function  (e) {
       return false;
     }
 })
+
+
+
+/*  In New View */ 
+
+$('#tags').focusout(function  () {
+  var $location = $('#tags');
+  var a = $location.val().replace(/ /g,'');  
+              $location.val(a);    
+
+  console.log( 'value of #tags', a);
+});
+
+
+
+/*  Geo complete For New View  
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"> </script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"> </script>
+<script src="/js/jquery.geocomplete.js"> </script>
+
+<script>
+
+     
+
+</script>
+
+
+   */
 
 
 
