@@ -103,7 +103,7 @@ $('#roomlocation').keypress(function  (e) {
 
 $('#tags').focusout(function  () {
   var $location = $('#tags');
-  var a = $location.val().replace(/ /g,'');  
+  var a = $location.val().replace(/ /g,'');     //  $('#tags').val().replace(/ /g,'');
               $location.val(a);    
 
   console.log( 'value of #tags', a);
@@ -111,19 +111,20 @@ $('#tags').focusout(function  () {
 
 
 
-/*  Geo complete For New View  
-<script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"> </script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"> </script>
-<script src="/js/jquery.geocomplete.js"> </script>
+/*  
 
-<script>
-
-     
-
-</script>
-
-
+in create post/ room  when you click on Save Changes blue button
    */
+
+  $(".save-btn").on('click', function () {
+  var $location = $('#tags');
+  var a = $location.val().replace(/ /g,'');     //  $('#tags').val().replace(/ /g,'');
+              $location.val(a);    
+
+  // console.log( 'value of #tags', a);
+});
+
+
 
 
 

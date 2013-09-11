@@ -14,8 +14,6 @@ var mongoose = require('mongoose'),
    */
 
 var getTags = function(tags) {
-  // console.log('getTags = ',)
-  // return tags.join(',')
   return tags
 }
 
