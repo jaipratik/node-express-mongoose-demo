@@ -110,6 +110,21 @@ $('#tags').focusout(function  () {
 });
 
 
+$('#tags').keypress(function  (e) {
+  if (!e) e = window.event;
+    var keyCode = e.keyCode || e.which;
+    if (keyCode == '13'){
+       
+      var $location = $('#tags');
+      var a = $location.val().replace(/ /g,'');     //  $('#tags').val().replace(/ /g,'');
+              $location.val(a);  
+       $('.save-btn')[0].click();       
+
+
+      return false;
+    }
+})
+
 
 /*  
 

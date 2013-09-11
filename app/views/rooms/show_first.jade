@@ -13,6 +13,12 @@ block content
           p Author -&nbsp;
             a(href="/users/"+room.user._id)= name
         p.muted= formatDate(room.createdAt, "%b %d, %Y at %I:%M %p")
+        - if (room.tags)
+          .tags
+            - each tag in room.tags
+              a.tag(href="/rtags/"+tag)
+                i.icon-tags
+                |  #{tag}
               &nbsp;&nbsp;
     .span3
       - if (!room.isNew && room.image && room.image.files && room.image.files.length)
@@ -30,5 +36,5 @@ block content
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       
-      a.btn.btn-success(href='/rooms/', title="edit") I'm Done - Show me my posting
+      a.btn.btn-success(href='/rtags/#{room.tags}', title="edit") I'm Done - Show me my posting
 
