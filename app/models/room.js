@@ -1,31 +1,34 @@
-
 /**
  * Module dependencies.  -- article Model
  */
 
-var mongoose = require('mongoose')
-  , Imager = require('imager')
-  , env = process.env.NODE_ENV || 'development'
-  , config = require('../../config/config')[env]
-  , imagerConfig = require(config.root + '/config/imager.js')
-  , Schema = mongoose.Schema
+var mongoose = require('mongoose'),
+  Imager = require('imager'),
+  env = process.env.NODE_ENV || 'development',
+  config = require('../../config/config')[env],
+  imagerConfig = require(config.root + '/config/imager.js'),
+  Schema = mongoose.Schema
 
-/**
- * Getters
- */
+  /**
+   * Getters
+   */
 
-var getTags = function (tags) {
-  return tags.join(',')
+var getTags = function(tags) {
+  // console.log('getTags = ',)
+  // return tags.join(',')
+  return tags
 }
 
 /**
  * Setters
  */
 
-var setTags = function (tags) {
-    var tmp = tags.split(',');
+var setTags = function(tags) {
+   return tags
+ /*  
+  var tmp = tags.split(',');
   // return tags.split(',')
-  return tags.split('(())')
+  return tags.split('(())')  */
 }
 
 /**
@@ -33,31 +36,58 @@ var setTags = function (tags) {
  */
 
 var RoomSchema = new Schema({
-  title: {type : String, default : '', trim : true},
-  body: {type : String, default : '', trim : true},
-  user: {type : Schema.ObjectId, ref : 'User'},
+  title: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  body: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  user: {
+    type: Schema.ObjectId,
+    ref: 'User'
+  },
   comments: [{
-    body: { type : String, default : '' },
-    user: { type : Schema.ObjectId, ref : 'User' },
-    createdAt: { type : Date, default : Date.now }
+    body: {
+      type: String,
+      default: ''
+    },
+    user: {
+      type: Schema.ObjectId,
+      ref: 'User'
+    },
+    createdAt: {
+      type: Date,
+      default: Date.now
+    }
   }],
-  tags: {type: [], get: getTags, set: setTags},
+  tags: {
+    type: [],
+    get: getTags,
+    set: setTags
+  },
   image: {
     cdnUri: String,
     files: []
   },
-  createdAt  : {type : Date, default : Date.now}
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
 })
 
 /**
  * Validations
  */
 
-RoomSchema.path('title').validate(function (title) {
+RoomSchema.path('title').validate(function(title) {
   return title.length > 0
 }, 'Room title cannot be blank')
 
-RoomSchema.path('body').validate(function (body) {
+RoomSchema.path('body').validate(function(body) {
   return body.length > 0
 }, 'Room body cannot be blank')
 
@@ -65,12 +95,12 @@ RoomSchema.path('body').validate(function (body) {
  * Pre-remove hook
  */
 
-RoomSchema.pre('remove', function (next) {
+RoomSchema.pre('remove', function(next) {
   var imager = new Imager(imagerConfig, 'S3')
   var files = this.image.files
 
   // if there are files associated with the item, remove from the cloud too
-  imager.remove(files, function (err) {
+  imager.remove(files, function(err) {
     if (err) return next(err)
   }, 'room')
 
@@ -91,16 +121,19 @@ RoomSchema.methods = {
    * @api private
    */
 
-  uploadAndSave: function (images, cb) {
+  uploadAndSave: function(images, cb) {
     if (!images || !images.length) return this.save(cb)
 
     var imager = new Imager(imagerConfig, 'S3')
     var self = this
 
-    imager.upload(images, function (err, cdnUri, files) {
+    imager.upload(images, function(err, cdnUri, files) {
       if (err) return cb(err)
       if (files.length) {
-        self.image = { cdnUri : cdnUri, files : files }
+        self.image = {
+          cdnUri: cdnUri,
+          files: files
+        }
       }
       self.save(cb)
     }, 'room')
@@ -115,7 +148,7 @@ RoomSchema.methods = {
    * @api private
    */
 
-  addComment: function (user, comment, cb) {
+  addComment: function(user, comment, cb) {
     var notify = require('../mailer/notify')
 
     this.comments.push({
@@ -148,8 +181,10 @@ RoomSchema.statics = {
    * @api private
    */
 
-  load: function (id, cb) {
-    this.findOne({ _id : id })
+  load: function(id, cb) {
+    this.findOne({
+      _id: id
+    })
       .populate('user', 'name email username')
       .populate('comments.user')
       .exec(cb)
@@ -163,13 +198,15 @@ RoomSchema.statics = {
    * @api private
    */
 
-  list: function (options, cb) {
+  list: function(options, cb) {
     var criteria = options.criteria || {}
 
     this.find(criteria)
       .populate('user', 'name username')
-      .sort({'createdAt': -1}) // sort by date
-      .limit(options.perPage)
+      .sort({
+        'createdAt': -1
+      }) // sort by date
+    .limit(options.perPage)
       .skip(options.perPage * options.page)
       .exec(cb)
   }

@@ -15,7 +15,7 @@ block content
         p.muted= formatDate(room.createdAt, "%b %d, %Y at %I:%M %p")
         - if (room.tags)
           .tags
-            - each tag in room.tags.split(',')
+            - each tag in room.tags
               a.tag(href="/rtags/"+tag)
                 i.icon-tags
                 |  #{tag}

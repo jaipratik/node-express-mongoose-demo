@@ -26,7 +26,7 @@ block content
             a(href="/users/"+room.user._id)= name
           &nbsp; - &nbsp;
           - if (room.tags)
-            - each tag in room.tags.split(',')
+            - each tag in room.tags
               &nbsp;
               a.tag(href="/rtags/"+tag)
                 i.icon-tags
