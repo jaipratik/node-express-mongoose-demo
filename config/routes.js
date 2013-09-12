@@ -132,7 +132,7 @@ module.exports = function (app, passport) {
   // home route
   app.get('/', rooms.roomhome)
 
-  // app.get('/', home.index)
+  app.get('/home', home.index)
 
   // comment routes
   var comments = require('../app/controllers/comments')

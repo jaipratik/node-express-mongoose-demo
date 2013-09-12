@@ -1,6 +1,6 @@
 node_modules
 .monitor
 Makefile
-todo.TODO
+.TODO
 npm-debug.log
 public/js/app-copy.js

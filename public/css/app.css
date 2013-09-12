@@ -26,6 +26,11 @@ body {
 	margin-bottom: 12px;
 	margin-left: 10px;
 }
+.roomgo{
+  margin-bottom: 12px;
+  margin-left: 10px;
+}
+
 .maroon{
   color:maroon;
   text-align: center;
@@ -50,6 +55,48 @@ a.footerlinks{
 .push{
   margin-bottom: 100px;
 }
+
+
+.pac-container{background-color:#fff;border:1px solid #ccc;overflow:hidden}
+.pac-container:after{padding-top:3px;text-align:right;display:block;font-size:0}
+.pac-item{cursor:pointer;padding:0 4px;text-overflow:ellipsis;white-space:nowrap}
+.pac-item:hover{background-color:#f0f0ff}
+.pac-selected{background-color:#d5ddf3}
+.pac-placeholder{color:gray}
+.pac-container:after {
+  background-image:url("https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white2_hdpi.png");
+  content:"";
+  height:16px;
+  background-position:right;
+  background-repeat:no-repeat;background-size:104px 16px;
+}
+
+
+
+
+
+
+/*.pac-container{background:#fff;-webkit-box-shadow:0 0 5px rgba(0,0,0,0.5);box-shadow:0 0 5px rgba(0,0,0,0.5);border:1px solid #000;border-top:none}.pac-container .pac-item{color:#2096cc;border-bottom:#f0f0f0;font-weight:normal;overflow:hidden;padding:0.3em 0.8em}.pac-container .pac-item:hover,.pac-container .pac-item.pac-selected{background:#1384b3 url(https://a0.muscache.com/airbnb/static/landing_pages/home_v2/search-option-highlight-bg-fdcbf17186af2f120363d76c8b768954.jpg) 0 0 repeat-x !important;color:#fff}.pac-container .pac-item:nth-child(odd){background:#fafafa}.pac-container,.pac-container .pac-item:last-child{-moz-border-radius:0 0 4px 4px;-webkit-border-radius:0 0 4px 4px;border-radius:0 0 4px 4px}*/
+
+
+
+.pac-container{background:#fff;-webkit-box-shadow:0 0 5px rgba(0,0,0,0.5);box-shadow:0 0 5px rgba(0,0,0,0.5);border:1px solid #000;border-top:none}
+.pac-container .pac-item{color:#2096cc;border-bottom:#f0f0f0;font-weight:normal;overflow:hidden;padding:0.3em 0.8em}
+.pac-container .pac-item:hover,.pac-container .pac-item.pac-selected{
+  background:#1384b3 url('../img/torquoisecolor.jpg') 0 0 repeat-x !important;color:#fff}
+.pac-container .pac-item:nth-child(odd){background:#fafafa}
+.pac-container,.pac-container .pac-item:last-child{-moz-border-radius:0 0 4px 4px;-webkit-border-radius:0 0 4px 4px;border-radius:0 0 4px 4px}
+
+.pac-container,.pac-item{font-size: 16px;}
+
+
+
+
+
+
+
+
+
 
 
 
