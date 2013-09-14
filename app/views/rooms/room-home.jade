@@ -7,7 +7,7 @@ block main
           input#roomlocation.location(type='text', autocomplete='off', name='location', placeholder='Enter: City, State, Country ', style='color: blue;')
           p#enter_location_error_message.bad(style='display: none;') Please set location
         #checkinWrapper.input-wrapper
-          input#checkin.checkin.search-option.ui-datepicker-target(type='text', name='checkin', placeholder='Check in')
+          input#checkin.checkin.search-option.ui-datepicker-target(type='text', name='checkin', placeholder='-----> ')
           span.search-area-icon
         //- #checkoutWrapper.input-wrapper
         //-   input#checkout.checkout.search-option.ui-datepicker-target(type='text', name='checkout', placeholder='Check out')
@@ -23,7 +23,7 @@ block main
               option(value='4') Misceleneous
 
         input(type='hidden', name='source', value='bb')
-        button#submit_location.large.btn.icon-and-text.position-left(type='submit')
+        a#submit_location.large.btn.icon-and-text.position-left.roomgo(type='submit')
           i.icon.icon-search
           | Search
 
@@ -42,37 +42,37 @@ block main
           ul.city-tiles.unstyled
             li.city-tile
               .feature-image.sprite-homev2-tiles.sprite-homev2-tiles-ny
-              a(href='https://www.airbnb.com/locations/new-york')
+              a(href='https://www.indiadilse.com/locations/new-york')
                 h4 New York
                 span 51 neighborhoods
             li.city-tile
               .sprite-homev2-tiles.sprite-homev2-tiles-london
-              a(href='https://www.airbnb.com/locations/london')
+              a(href='https://www.indiadilse.com/locations/london')
                 h4 London
                 span 47 neighborhoods
             li.city-tile
               .sprite-homev2-tiles.sprite-homev2-tiles-paris
-              a(href='https://www.airbnb.com/locations/paris')
+              a(href='https://www.indiadilse.com/locations/paris')
                 h4 Paris
                 span 31 neighborhoods
             li.city-tile
               .sprite-homev2-tiles.sprite-homev2-tiles-sf
-              a(href='https://www.airbnb.com/locations/san-francisco')
+              a(href='https://www.indiadilse.com/locations/san-francisco')
                 h4 San Francisco
                 span 36 neighborhoods
             li.city-tile
               .sprite-homev2-tiles.sprite-homev2-tiles-sydney
-              a(href='https://www.airbnb.com/locations/sydney')
+              a(href='https://www.indiadilse.com/locations/sydney')
                 h4 Sydney
                 span 46 neighborhoods
               span.label.label-pink New
             li.city-tile
               .sprite-homev2-tiles.sprite-homev2-tiles-berlin
-              a(href='https://www.airbnb.com/locations/berlin')
+              a(href='https://www.indiadilse.com/locations/berlin')
                 h4 Berlin
                 span
                   | 11 neighborhoods
-          a.large.gray.btn(href='https://www.airbnb.com/locations') All neighborhood guides
+          a.large.gray.btn(href='www.indiadilse.com/locations') All neighborhood guides
   //- .section
   //-   .container
   //-     .row
@@ -108,42 +108,42 @@ block main
         h5 Discover
         ul.unstyled.js-footer-links
           li
-            a(href='https://www.airbnb.com/safety') Safety
+            a(href='bnb.com') Safety
           li
-            a(href='https://www.airbnb.com/wishlists/airbnb_picks') Airbnb Picks
+            a(href='bnb.com/wishlists/airbn') Airbnb Picks
           li
-            a(href='https://www.airbnb.com/mobile') Mobile
+            a(href='bnb.com') Mobile
           li
-            a(href='https://www.airbnb.com/life') Life
+            a(href='bnb.c') Life
           li
-            a(href='https://www.airbnb.com/info/how_it_works') How it works
+            a(href='bnb.com/info/how_i') How it works
           li
-            a(href='https://www.airbnb.com/info/why_host') Why Host
+            a(href='bnb.com/info/w') Why Host
           li
-            a(href='https://www.airbnb.com/social') Social Connections
+            a(href='bnb.com') Social Connections
           li
-            a(href='https://www.airbnb.com/sitemaps') Site Map
+            a(href='bnb.com/s') Site Map
       .span3
         h5 Company
         ul.unstyled.js-footer-links
           li
-            a(href='https://www.airbnb.com/about') About
+            a(href='h') About
           li
-            a(href='https://www.airbnb.com/jobs') Jobs
+            a(href='') Jobs
           li
-            a(href='https://www.airbnb.com/press') Press
+            a(href='bnb.cs') Press
           li
-            a(href='http://blog.airbnb.com/') Blog
+            a(href='b') Blog
           li
-            a(href='https://www.airbnb.com/help') Help
+            a(href='bnb.c') Help
           li
-            a(href='https://www.airbnb.com/policies') Policies
+            a(href='bnb.com/p') Policies
           li
-            a(href='https://www.airbnb.com/help/hosting101/responsible-hosting') Responsible Hosting
+            a(href='bnb.com/help/hosting101/responsible-') Responsible Hosting
           li
-            a(href='https://www.airbnb.com/disaster-response') Disaster Response
+            a(href='bnb.com/disaster-r') Disaster Response
           li
-            a(href='https://www.airbnb.com/terms') Terms & Privacy
+            a(href='bnb.co') Terms & Privacy
       .span3
         h5 Join us on
         ul.unstyled.js-external-links
@@ -160,7 +160,7 @@ block main
             a(href='http://www.youtube.com/airbnb', target='_blank')
               | YouTube
         #copyright
-          | © Airbnb, Inc.
+          | © IndaiDilSe, Inc.
 
 
 
