@@ -4,7 +4,7 @@ block main
   .search-area
       form#search_form.custom.show-search-options.position-left(action='https://www.airbnb.com/s')
         .input-wrapper
-          input#roomlocation.location(type='text', autocomplete='off', name='location', placeholder='Where do you want to go?', style='color: blue;')
+          input#roomlocation.location(type='text', autocomplete='off', name='location', placeholder='Enter: City, State, Country', style='color: blue;')
           p#enter_location_error_message.bad(style='display: none;') Please set location
         #checkinWrapper.input-wrapper
           input#checkin.checkin.search-option.ui-datepicker-target(type='text', name='checkin', placeholder='Check in')
@@ -14,12 +14,14 @@ block main
         //-   span.search-area-icon.search-area-icon-checkout
         .input-wrapper
           .custom-select-container
-            .custom.dropdown.small.current(aria-hidden='true') 1 Guest
+            .custom.dropdown.small.current(aria-hidden='true') Rooms
             .custom.selector
             select#guests.search-option.small(name='guests')
-              option(value='1') 1 Guest
-              option(value='2') 2 Guests
-              option(value='3') 3 Guests
+              option(value='1') Rooms
+              option(value='2') Apartments
+              option(value='3') Nany Service
+              option(value='4') Misceleneous
+
         input(type='hidden', name='source', value='bb')
         button#submit_location.large.pink.btn.icon-and-text.position-left(type='submit')
           i.icon.icon-search
