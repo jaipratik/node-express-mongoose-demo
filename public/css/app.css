@@ -34,6 +34,10 @@ body {
   margin-left: 10px;
 }
 
+#roomlocation{
+  width:300px;
+}
+
 .maroon{
   color:maroon;
   text-align: center;

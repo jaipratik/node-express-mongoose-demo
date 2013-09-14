@@ -4,14 +4,14 @@ block main
   .search-area
       form#search_form.custom.show-search-options.position-left(action='https://www.airbnb.com/s')
         .input-wrapper
-          input#roomlocation#location.location(type='text', autocomplete='off', name='location', placeholder='Where do you want to go?', style='color: blue;')
+          input#roomlocation.location(type='text', autocomplete='off', name='location', placeholder='Where do you want to go?', style='color: blue;')
           p#enter_location_error_message.bad(style='display: none;') Please set location
         #checkinWrapper.input-wrapper
           input#checkin.checkin.search-option.ui-datepicker-target(type='text', name='checkin', placeholder='Check in')
           span.search-area-icon
-        #checkoutWrapper.input-wrapper
-          input#checkout.checkout.search-option.ui-datepicker-target(type='text', name='checkout', placeholder='Check out')
-          span.search-area-icon.search-area-icon-checkout
+        //- #checkoutWrapper.input-wrapper
+        //-   input#checkout.checkout.search-option.ui-datepicker-target(type='text', name='checkout', placeholder='Check out')
+        //-   span.search-area-icon.search-area-icon-checkout
         .input-wrapper
           .custom-select-container
             .custom.dropdown.small.current(aria-hidden='true') 1 Guest
