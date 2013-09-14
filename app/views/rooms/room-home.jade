@@ -1,37 +1,168 @@
 extends ../layouts/default
 
 block main
-  .row-fluid.span12
-    h1.maroon Welcome to IndiaDilse!
-    p.homepara  Serving Indian community Worldwide!
-    ul.inline
-      li
-        p.muted
-          a(href='/articles/') Articles
-      li
-        p.muted
-          a(href='/rooms/') Rooms
-      li
-        p.muted
-          a(href="/articles/") Apartments/ housing for rent    
-    ul.inline
-      li
-        p.muted
-          a(href='/') Nanny-Services
-      li
-        p.muted
-          a(href="/IndianRoommates/") Jobs
-      li
-        p.muted
-          a(href="/IndianRoommates/") Events 
+  .search-area
+      form#search_form.custom.show-search-options.position-left(action='https://www.airbnb.com/s')
+        .input-wrapper
+          input#roomlocation#location.location(type='text', autocomplete='off', name='location', placeholder='Where do you want to go?', style='color: blue;')
+          p#enter_location_error_message.bad(style='display: none;') Please set location
+        #checkinWrapper.input-wrapper
+          input#checkin.checkin.search-option.ui-datepicker-target(type='text', name='checkin', placeholder='Check in')
+          span.search-area-icon
+        #checkoutWrapper.input-wrapper
+          input#checkout.checkout.search-option.ui-datepicker-target(type='text', name='checkout', placeholder='Check out')
+          span.search-area-icon.search-area-icon-checkout
+        .input-wrapper
+          .custom-select-container
+            .custom.dropdown.small.current(aria-hidden='true') 1 Guest
+            .custom.selector
+            select#guests.search-option.small(name='guests')
+              option(value='1') 1 Guest
+              option(value='2') 2 Guests
+              option(value='3') 3 Guests
+        input(type='hidden', name='source', value='bb')
+        button#submit_location.large.pink.btn.icon-and-text.position-left(type='submit')
+          i.icon.icon-search
+          | Search
 
-    .row
-      .span7
-        input#roomlocation(type='text', name='city')
-        key   
-        a.roomgo.button.btn.btn-primary(href='') Go
-        br
-      a.btn(href='/', title='cancel') Cancel
+
+
+  .section.section-offset
+    .container2
+      .row.space3
+        .span12.section-intro
+          h3
+            a(href='https://www.airbnb.com/locations') Neighborhood Guides
+          p
+            | Not sure where to stay? We've created neighborhood guides for cities all around the world.
+      .row.space2
+        .span12
+          ul.city-tiles.unstyled
+            li.city-tile
+              .feature-image.sprite-homev2-tiles.sprite-homev2-tiles-ny
+              a(href='https://www.airbnb.com/locations/new-york')
+                h4 New York
+                span 51 neighborhoods
+            li.city-tile
+              .sprite-homev2-tiles.sprite-homev2-tiles-london
+              a(href='https://www.airbnb.com/locations/london')
+                h4 London
+                span 47 neighborhoods
+            li.city-tile
+              .sprite-homev2-tiles.sprite-homev2-tiles-paris
+              a(href='https://www.airbnb.com/locations/paris')
+                h4 Paris
+                span 31 neighborhoods
+            li.city-tile
+              .sprite-homev2-tiles.sprite-homev2-tiles-sf
+              a(href='https://www.airbnb.com/locations/san-francisco')
+                h4 San Francisco
+                span 36 neighborhoods
+            li.city-tile
+              .sprite-homev2-tiles.sprite-homev2-tiles-sydney
+              a(href='https://www.airbnb.com/locations/sydney')
+                h4 Sydney
+                span 46 neighborhoods
+              span.label.label-pink New
+            li.city-tile
+              .sprite-homev2-tiles.sprite-homev2-tiles-berlin
+              a(href='https://www.airbnb.com/locations/berlin')
+                h4 Berlin
+                span
+                  | 11 neighborhoods
+          a.large.gray.btn(href='https://www.airbnb.com/locations') All neighborhood guides
+  //- .section
+  //-   .container
+  //-     .row
+  //-       .span4
+  //-         .panel-subtle-dark
+  //-           h5
+  //-             a(href='https://www.airbnb.com/help/getting-started/how-to-travel') Travel
+  //-           p
+  //-             | From apartments and rooms to treehouses and boats: stay in unique spaces in 192 countries.
+  //-           p
+  //-             a(href='https://www.airbnb.com/help/getting-started/how-to-travel')
+  //-               | See how to travel on Airbnb »
+  //-       .span4
+  //-         .panel-subtle-dark
+  //-           h5
+  //-             a(href='https://www.airbnb.com/help/getting-started/how-to-host') Host
+  //-           p Renting out your unused space could pay your bills or fund your next vacation.
+  //-           p
+  //-             a(href='https://www.airbnb.com/help/getting-started/how-to-host')
+  //-               | Learn more about hosting »
+  //-       .span4
+  //-         .panel-subtle-dark
+  //-           h5
+  //-             a(href='https://www.airbnb.com/trust')
+  //-               | Trust and Safety
+  //-           p From Verified ID to our worldwide customer support team, we've got your back.
+  //-           p
+  //-             a(href='https://www.airbnb.com/trust')
+  //-               | Learn about trust at Airbnb »
+  .container.footer-container
+    #footer.row
+      .span3
+        h5 Discover
+        ul.unstyled.js-footer-links
+          li
+            a(href='https://www.airbnb.com/safety') Safety
+          li
+            a(href='https://www.airbnb.com/wishlists/airbnb_picks') Airbnb Picks
+          li
+            a(href='https://www.airbnb.com/mobile') Mobile
+          li
+            a(href='https://www.airbnb.com/life') Life
+          li
+            a(href='https://www.airbnb.com/info/how_it_works') How it works
+          li
+            a(href='https://www.airbnb.com/info/why_host') Why Host
+          li
+            a(href='https://www.airbnb.com/social') Social Connections
+          li
+            a(href='https://www.airbnb.com/sitemaps') Site Map
+      .span3
+        h5 Company
+        ul.unstyled.js-footer-links
+          li
+            a(href='https://www.airbnb.com/about') About
+          li
+            a(href='https://www.airbnb.com/jobs') Jobs
+          li
+            a(href='https://www.airbnb.com/press') Press
+          li
+            a(href='http://blog.airbnb.com/') Blog
+          li
+            a(href='https://www.airbnb.com/help') Help
+          li
+            a(href='https://www.airbnb.com/policies') Policies
+          li
+            a(href='https://www.airbnb.com/help/hosting101/responsible-hosting') Responsible Hosting
+          li
+            a(href='https://www.airbnb.com/disaster-response') Disaster Response
+          li
+            a(href='https://www.airbnb.com/terms') Terms & Privacy
+      .span3
+        h5 Join us on
+        ul.unstyled.js-external-links
+          li
+            a(href='https://twitter.com/airbnb', target='_blank')
+              | Twitter
+          li
+            a(href='https://www.facebook.com/airbnb', target='_blank')
+              | Facebook
+          li
+            a(href='https://plus.google.com/+airbnb?rel=author', target='_blank')
+              | Google
+          li
+            a(href='http://www.youtube.com/airbnb', target='_blank')
+              | YouTube
+        #copyright
+          | © Airbnb, Inc.
+
+
+
+
 
     script(src='http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places')
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
@@ -62,3 +193,4 @@ block main
 
 
 
+      
