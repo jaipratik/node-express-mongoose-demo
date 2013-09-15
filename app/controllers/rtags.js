@@ -23,7 +23,7 @@ exports.index = function (req, res) {
     if (err) return res.render('500')
     Room.count(criteria).exec(function (err, count) {
       res.render('rooms/index', {
-        title: 'Rooms tagged tag-room   ' + req.param('tag'),
+        title: 'Roommates in   ' + req.param('tag'),
         rooms: rooms,
         page: page + 1,
         pages: Math.ceil(count / perPage)

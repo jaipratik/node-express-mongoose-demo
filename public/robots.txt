@@ -1,4 +1,7 @@
 User-Agent: *
-Disallow: 
+Disallow: /users/
+Disallow: /login/
+Disallow: /logout/
+Disallow: /img/
 
 Sitemap: http://indiadilse.com/sitemap.xml
