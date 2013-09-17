@@ -2,7 +2,7 @@ extends ../layouts/home
 
 block main
   .search-area
-      form#search_form.custom.show-search-options.position-left(action='https://www.indiadilse.com/s')
+      form#search_form.custom.show-search-options.position-left(action='https://www.airbnb.com/s')
         .input-wrapper
           input#roomlocation.location(type='text', autocomplete='off', name='location', placeholder='Enter: City, State, Country ', style='color: blue;')
           p#enter_location_error_message.bad(style='display: none;') Please set location
@@ -34,9 +34,9 @@ block main
       .row.space3
         .span12.section-intro
           h3
-            a(href='https://www.indiadilse.com/locations') IndiaDilse
+            a(href='https://www.airbnb.com/locations') Neighborhood Guides
           p
-            | Serving Indian community Worldwide!
+            | Not sure where to stay? We've created neighborhood guides for cities all around the world.
       .row.space2
         .span12
           ul.city-tiles.unstyled
@@ -46,37 +46,62 @@ block main
                 h4 New York
                 span 51 neighborhoods
             li.city-tile
-              .sprite-homev2-tiles.sprite-homev2-tiles-sydney
-              a(href='https://www.indiadilse.com/locations/sydney')
-                h4 Sydney
-                span 46 neighborhoods
-              span.label.label-pink New    
-            li.city-tile
               .sprite-homev2-tiles.sprite-homev2-tiles-london
               a(href='https://www.indiadilse.com/locations/london')
                 h4 London
                 span 47 neighborhoods
-            li.city-tile
-              .sprite-homev2-tiles.sprite-homev2-tiles-sf
-              a(href='https://www.indiadilse.com/locations/san-francisco')
-                h4 San Francisco
-                span 36 neighborhoods
-     
             li.city-tile
               .sprite-homev2-tiles.sprite-homev2-tiles-paris
               a(href='https://www.indiadilse.com/locations/paris')
                 h4 Paris
                 span 31 neighborhoods
             li.city-tile
+              .sprite-homev2-tiles.sprite-homev2-tiles-sf
+              a(href='https://www.indiadilse.com/locations/san-francisco')
+                h4 San Francisco
+                span 36 neighborhoods
+            li.city-tile
+              .sprite-homev2-tiles.sprite-homev2-tiles-sydney
+              a(href='https://www.indiadilse.com/locations/sydney')
+                h4 Sydney
+                span 46 neighborhoods
+              span.label.label-pink New
+            li.city-tile
               .sprite-homev2-tiles.sprite-homev2-tiles-berlin
               a(href='https://www.indiadilse.com/locations/berlin')
                 h4 Berlin
                 span
                   | 11 neighborhoods
-          a.large.gray.btn(href='www.indiadilse.com/locations') Other neighborhood
- 
-
-
+          a.large.gray.btn(href='www.indiadilse.com/locations') All neighborhood guides
+  //- .section
+  //-   .container
+  //-     .row
+  //-       .span4
+  //-         .panel-subtle-dark
+  //-           h5
+  //-             a(href='https://www.airbnb.com/help/getting-started/how-to-travel') Travel
+  //-           p
+  //-             | From apartments and rooms to treehouses and boats: stay in unique spaces in 192 countries.
+  //-           p
+  //-             a(href='https://www.airbnb.com/help/getting-started/how-to-travel')
+  //-               | See how to travel on Airbnb »
+  //-       .span4
+  //-         .panel-subtle-dark
+  //-           h5
+  //-             a(href='https://www.airbnb.com/help/getting-started/how-to-host') Host
+  //-           p Renting out your unused space could pay your bills or fund your next vacation.
+  //-           p
+  //-             a(href='https://www.airbnb.com/help/getting-started/how-to-host')
+  //-               | Learn more about hosting »
+  //-       .span4
+  //-         .panel-subtle-dark
+  //-           h5
+  //-             a(href='https://www.airbnb.com/trust')
+  //-               | Trust and Safety
+  //-           p From Verified ID to our worldwide customer support team, we've got your back.
+  //-           p
+  //-             a(href='https://www.airbnb.com/trust')
+  //-               | Learn about trust at Airbnb »
   .container.footer-container
     #footer.row
       .span3
@@ -85,7 +110,7 @@ block main
           li
             a(href='bnb.com') Safety
           li
-            a(href='bnb.com/wishlists/airbn') indiadilse Picks
+            a(href='bnb.com/wishlists/airbn') Airbnb Picks
           li
             a(href='bnb.com') Mobile
           li
@@ -114,21 +139,25 @@ block main
           li
             a(href='bnb.com/p') Policies
           li
+            a(href='bnb.com/help/hosting101/responsible-') Responsible Hosting
+          li
+            a(href='bnb.com/disaster-r') Disaster Response
+          li
             a(href='bnb.co') Terms & Privacy
       .span3
         h5 Join us on
         ul.unstyled.js-external-links
           li
-            a(href='https://twitter.com/indaidilse1', target='_blank')
+            a(href='https://twitter.com/airbnb', target='_blank')
               | Twitter
           li
-            a(href='https://www.facebook.com/indaidilse', target='_blank')
+            a(href='https://www.facebook.com/airbnb', target='_blank')
               | Facebook
           li
-            a(href='https://plus.google.com/+indaidilse?rel=author', target='_blank')
+            a(href='https://plus.google.com/+airbnb?rel=author', target='_blank')
               | Google
           li
-            a(href='http://www.youtube.com/indaidilse', target='_blank')
+            a(href='http://www.youtube.com/airbnb', target='_blank')
               | YouTube
         #copyright
           | © IndaiDilSe, Inc.
