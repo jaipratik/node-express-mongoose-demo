@@ -13,12 +13,22 @@ var mongoose = require('mongoose')
 
 /**
  * Room home
- */
 
 exports.roomhome = function(req, res){
     res.render('rooms/room-home', {
 });
 }
+ */
+
+
+exports.roomhome = function(req, res){
+    res.render('rooms/room-home', {
+    title: 'Rooms',
+    room: req.room
+  })
+}
+
+
 
 /**
  * Load

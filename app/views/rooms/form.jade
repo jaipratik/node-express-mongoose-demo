@@ -34,9 +34,9 @@ block content
             textarea#desc.input-xlarge(type='text', rows="5", name="body", placeholder='Enter the room description')=room.body
 
         .control-group
-          label.control-label(for='desc') Tags
+          label.control-label(for='desc') Location
           .controls
-            input#tags(type='text', name="tags", value=room.tags, placeholder='Enter the tags')
+            input#tags(type='text', name="tags", value=room.tags, placeholder='City, State, Country')
 
         .form-actions
           button.btn.btn-primary.save-btn(type='submit') Save changes
