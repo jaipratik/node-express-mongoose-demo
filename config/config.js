@@ -24,7 +24,7 @@ module.exports = {
     facebook: {
       clientID: "363909887042099",
       clientSecret: "c034c5380af10fe4782bb7bb544680bd",
-      callbackURL: "http://www.indiadilse.com/auth/facebook/callback"
+      callbackURL: "http://www.localhost:80/auth/facebook/callback"
     },
     twitter: {
       clientID: "NhNCwt2r41x3AAG9OSH5yQ",
