@@ -72,7 +72,7 @@ var room_GoClicked = function  () {
   var a = $location.val().replace(/ /g,'');   
         $location.val(a);  
   var loc = $location.val();
-  var loc2  = "/rtags/"+loc;
+  var loc2  = "/rooms-in/"+loc;
   $('.roomgo').attr("href", loc2);
   $('.roomgo')[0].click();
 }
@@ -83,7 +83,7 @@ $('.roomgo').on('click', function () {
   var a = $location.val().replace(/ /g,'');  
               $location.val(a);    
   var loc = $location.val();
-  var loc2  = "/rtags/"+loc;
+  var loc2  = "/rooms-in/"+loc;
 $('.roomgo').attr("href", loc2)
 });
 

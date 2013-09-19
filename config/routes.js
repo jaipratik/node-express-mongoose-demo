@@ -125,7 +125,7 @@ module.exports = function (app, passport) {
  
  // tag routes
   var rtags = require('../app/controllers/rtags')
-  app.get('/rtags/:tag', rtags.index)
+  app.get('/rooms-in/:tag', rtags.index)
 
 
 
