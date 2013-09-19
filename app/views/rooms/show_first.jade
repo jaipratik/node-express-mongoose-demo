@@ -16,7 +16,7 @@ block content
         - if (room.tags)
           .tags
             - each tag in room.tags
-              a.tag(href="/rooms-in/"+tag)
+              a.tag(href="/indian-roommates-in/"+tag)
                 i.icon-tags
                 |  #{tag}
               &nbsp;&nbsp;
@@ -36,5 +36,5 @@ block content
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       
-      a.btn.btn-success(href='/rooms-in/#{room.tags}', title="edit") I'm Done - Show me my posting
+      a.btn.btn-success(href='/indian-roommates-in/#{room.tags}', title="edit") I'm Done - Show me my posting
 
