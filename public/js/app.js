@@ -7,6 +7,9 @@
 
 $(document).ready(function ($) {
 
+
+  $('.location, .roomlocation').focus();
+
   // confirmations
   $('.confirm').submit(function (e) {
     e.preventDefault();
