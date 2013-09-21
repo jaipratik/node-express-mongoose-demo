@@ -134,6 +134,12 @@ module.exports = function (app, passport) {
 
   app.get('/home', home.index)
 
+  app.get('/about', home.about)
+
+  app.get('/about_us', home.about_us)
+
+
+
   // comment routes
   var comments = require('../app/controllers/comments')
   app.post('/articles/:id/comments', auth.requiresLogin, comments.create)
