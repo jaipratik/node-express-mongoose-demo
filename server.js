@@ -37,6 +37,13 @@ fs.readdirSync(models_path).forEach(function (file) {
 require('./config/passport')(passport, config)
 
 var app = express()
+
+
+
+
+
+
+
 // express settings
 require('./config/express')(app, config, passport)
 
@@ -51,3 +58,14 @@ console.log('Express app started on port '+port)
 
 // expose app
 exports = module.exports = app
+
+
+
+
+
+
+
+
+
+
+

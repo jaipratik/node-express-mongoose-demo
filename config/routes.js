@@ -136,7 +136,15 @@ module.exports = function (app, passport) {
 
   app.get('/about', home.about)
 
-  app.get('/about_us', home.about_us)
+  app.get('/events',home.events)
+  app.get('/nanny_services', home.nanny_services)
+  app.get('/jobs', home.jobs)
+  app.get('/training', home.training)
+  app.get('/discussion_boards', home.discussion_boards)
+  app.get('/indian_recipes', home.indian_recipes)
+  app.get('/articles', home.articles)
+  app.get('/classified', home.classified)
+
 
 
 
