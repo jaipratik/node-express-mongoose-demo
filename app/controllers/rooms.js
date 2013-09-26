@@ -23,7 +23,7 @@ exports.roomhome = function(req, res){
 
 exports.roomhome = function(req, res){
     res.render('rooms/room-home', {
-    title: 'Rooms Serving indian community WorldWide!',
+    title: 'Indian Roommates - Serving indian community WorldWide!',
     room: req.room
   })
 }
